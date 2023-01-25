@@ -16,7 +16,7 @@ export default function ToDo() {
 
     return (
         <>
-            <h1 className='text-center'>Brian's Awesome To-Do List Generator</h1>
+            <h1 className='text-center'>Your To-Do List</h1>
             <ToDoForm handleFormSubmit={handleFormSubmit} />
             <div className='row'>
                 {tasks.map((task, idx) => <ToDoCard task={task} key={idx} />)}

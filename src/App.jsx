@@ -1,6 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import Nav from './components/Nav';
 import ToDo from './components/ToDo';
+import ClassDisplay from './components/ClassDisplay';
 
 export default function App() {
     return (
@@ -9,8 +11,11 @@ export default function App() {
             <div className="container">
                 <ToDo />
             </div>
+            <div className="container">
+                <ClassDisplay students={students}/>
+            </div>
         </>
     )
 }
 
-export default App;
+

@@ -3,25 +3,26 @@ import { useState, useEffect } from "react";
 
 export default function ClassDisplay(props) {
     const tableHeaders = ['ID', 'First Name', 'Last Name']
-    const [students, setStudents] = useState([]);
     
+        
 
     useEffect(() => {
-        console.log('useEffect effect callback has been called')
         fetch(`https://scratched-juniper-salto.glitch.me/kekambas`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
             const classList = data;
             setStudents(classList);
+            console.log(classList)
         })
-    }) 
+    }, []) 
+    
+    const [students, setStudents] = useState([]);
 
     return (
         
+        
         <div>
-            <h1 className='text-center my-3'>Kekambas 106</h1>
-
             <table className='table table-primary table-striped'>
                 <thead>
                     <tr className='fst-italic fs-4'>

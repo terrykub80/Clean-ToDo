@@ -12,11 +12,9 @@ export default function App() {
             <Nav />
             <div className="container">
                 <ToDo />
-            </div>
-            <div className="container">
-                <h1 className='text-center my-3'>Kekambas 106</h1>
                 <ClassDisplay students={students}/>
             </div>
+           
         </>
     )
 }
